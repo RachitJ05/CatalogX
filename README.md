@@ -1,4 +1,4 @@
-# ✨ CodeConnect
+# ✨ CatalogX
 
 CatalogX is a peer-to-peer product listing platform that allows users to create, manage, and browse items for sale. Built with a modern full-stack architecture featuring secure authentication, scalable APIs, and a responsive, data-driven UI.
 
@@ -53,7 +53,7 @@ CatalogX is a peer-to-peer product listing platform that allows users to create,
 
 ## 📁 Project Structure
 ```
-CodeConnect/
+CatalogX/
 ├── backend/       # Express Backend
 │   ├── src/
 │       ├── config
