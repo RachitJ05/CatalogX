@@ -133,6 +133,6 @@ VITE_API_URL=http://localhost:3000/api
 ### Run Locally
 
 ```bash
-cd backend && npm run dev
+cd backend && npx drizzle-kit push && npm run dev
 cd frontend && npm run dev
 ```
