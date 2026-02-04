@@ -22,9 +22,9 @@ pool.on("error", (err) => {
 
 export const db = drizzle({ client: pool, schema });
 
-// 👀 What is a Connection Pool?
+//  What is a Connection Pool?
 // A connection pool is a cache of database connections that are kept open and reused.
 
-// 🤷‍♂️ Why use it?
-// 🔴 Opening/closing connections is slow. Instead of creating a new connection for each request, we reuse existing ones.
-// 🔴 Databases limit concurrent connections. A pool manages a fixed number of connections and shares them across requests.
+//  Why use it?
+//  Opening/closing connections is slow. Instead of creating a new connection for each request, we reuse existing ones.
+//  Databases limit concurrent connections. A pool manages a fixed number of connections and shares them across requests.

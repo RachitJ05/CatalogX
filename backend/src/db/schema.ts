@@ -41,16 +41,12 @@ export const comments = pgTable("comments", {
 //  Relations define how tables connect to each other. This enables Drizzle's query API
 //  to automatically join related data when using `with: { relationName: true }`
 
-//  Users Relations: A user can have many products and many comments
-//  `many()` means one user can have multiple related records
 
 export const usersRelations = relations(users, ({ many }) => ({
   products: many(products), //  One user → many products
   comments: many(comments), //  One user → many comments
 }));
 
-// Products Relations: a product belongs to one user and can have many comments
-// `one()` means a single related record, `many()` means multiple related records
 
 export const productsRelations = relations(products, ({ one, many }) => ({
   comments: many(comments),
@@ -59,7 +55,7 @@ export const productsRelations = relations(products, ({ one, many }) => ({
   user: one(users, { fields: [products.userId], references: [users.id] }), // one product → one user
 }));
 
-// Comments Relations: A comment belongs to one user and one product
+
 export const commentsRelations = relations(comments, ({ one }) => ({
   // `comments.userId` is the foreign key,  `users.id` is the primary key
   user: one(users, { fields: [comments.userId], references: [users.id] }), // One comment → one user
