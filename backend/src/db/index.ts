@@ -12,12 +12,12 @@ const pool = new Pool({ connectionString: ENV.DATABASE_URL });
 
 // log when first connection is made
 pool.on("connect", () => {
-  console.log("Database connected successfully ✅");
+  console.log("Database connected successfully");
 });
 
 // log when an error occurs
 pool.on("error", (err) => {
-  console.error("💥 Database connection error:", err);
+  console.error("Database connection error:", err);
 });
 
 export const db = drizzle({ client: pool, schema });
