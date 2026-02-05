@@ -39,9 +39,9 @@ const THEMES = [
 function ThemeSelector() {
   const [theme, setTheme] = useState(() => {
     if (typeof window !== "undefined") {
-      return localStorage.getItem("theme") || "forest";
+      return localStorage.getItem("theme") || "night";
     }
-    return "forest";
+    return "night";
   });
 
   useEffect(() => {
